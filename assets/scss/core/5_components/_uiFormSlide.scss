@@ -1,0 +1,33 @@
+ul.ui-formSlide {
+    display: block;
+    position: relative;
+    padding: 0;
+    // white-space: nowrap;
+    font-size: 0;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 1;
+    height: 100%;
+
+    li[data-step] {
+        width: 100%;
+        vertical-align: top;
+        font-size: 16px;
+        display: none;
+        white-space: normal;
+
+        .ui-step-content {
+            opacity: 0;
+            @include transition(opacity 0.5s);
+
+            &.in {
+                opacity: 1;
+            }
+        }
+
+        &.active {
+            display: inline-block;
+        }
+    }
+}

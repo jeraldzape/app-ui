@@ -1,0 +1,8 @@
+.ui-error-label{
+  &.active{
+    display: block;
+  }
+  &:not(.active){
+    display: none;
+  }
+}

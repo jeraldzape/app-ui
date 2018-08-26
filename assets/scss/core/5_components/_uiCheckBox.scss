@@ -1,0 +1,15 @@
+.ui-checkbox {
+    position: relative;
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    p {
+        display: block;
+    }
+
+    .ui-checkbox-icon {
+        &.checked {}
+    }
+}

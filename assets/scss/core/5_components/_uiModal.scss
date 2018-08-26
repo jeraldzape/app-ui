@@ -1,0 +1,71 @@
+.ui-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(black, .5%);
+    z-index: 99999;
+    overflow: auto;
+    display: none;
+    opacity: 0;
+
+    &:after{
+      content:"";
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 100%;
+      bottom: -10px;
+      z-index: -1;
+      opacity: 0.5;
+      background: rgba(0,0,0,0.8);
+    }
+
+    &.ready{
+      display: block;
+    }
+
+    &.in{
+      opacity: 1;
+      overflow-y: scroll
+    }
+
+    .table-cell{
+      padding: 10px;
+    }
+
+    &__box {
+        background: whitesmoke;
+        display: block;
+        margin: auto;
+        padding: 10px;
+        opacity: 0;
+        outline: 1px solid transparent;
+        @include transition(0.5s ease);
+        @include transform(scale(0.99) translateY(15%));
+
+        .in &{
+          @include transform(scale(1) translateY(0));
+          opacity: 1;
+        }
+    }
+}
+
+// html{
+//   overflow: hidden;
+//   height: 100%;
+//   body{
+//     overflow: auto;
+//     height: 100%;
+//   }
+// }
+
+html.ui-modal-open{
+  body{
+    overflow: hidden;
+    //height: 100%;
+    //overflow: hidden;
+  }
+}

@@ -1,0 +1,37 @@
+.ui-input-group {
+    position: relative;
+
+    &--select {
+        select {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 1;
+        }
+        input{
+          display: block;
+          width: 100%;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 5px;
+            z-index: 2;
+            width: 20px;
+            height: 20px;
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAYAAAA8sqwkAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAElJREFUeNpiYCAe+AIxM4ghAsTTgZgTj+IyIL4JVQvWtQyId+DQBFMshSwI0rQUiyasinFpAim+gUsxuqbrxChG1tSJSzFAgAEA8msN9R3HacMAAAAASUVORK5CYII=");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: auto;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+    }
+}
